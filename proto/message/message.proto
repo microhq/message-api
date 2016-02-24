@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "github.com/micro/micro/api/proto/api.proto";
+
+service Message {
+	rpc Create(Request) returns (Response) {}
+	rpc Delete(Request) returns (Response) {}
+	rpc Update(Request) returns (Response) {}
+	rpc Search(Request) returns (Response) {}
+	rpc Read(Request) returns (Response) {}
+}
