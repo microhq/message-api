@@ -1,9 +1,9 @@
 package main
 
 import (
+	"log"
 	"time"
 
-	log "github.com/golang/glog"
 	"github.com/micro/go-micro"
 	"github.com/micro/message-api/handler"
 	proto "github.com/micro/message-api/proto/message"
