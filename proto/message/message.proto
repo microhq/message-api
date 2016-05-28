@@ -1,11 +1,13 @@
 syntax = "proto3";
 
+package go.micro.srv.message;
+
 import "github.com/micro/micro/api/proto/api.proto";
 
 service Message {
-	rpc Create(Request) returns (Response) {}
-	rpc Delete(Request) returns (Response) {}
-	rpc Update(Request) returns (Response) {}
-	rpc Search(Request) returns (Response) {}
-	rpc Read(Request) returns (Response) {}
+	rpc Create(api.Request) returns (api.Response) {}
+	rpc Delete(api.Request) returns (api.Response) {}
+	rpc Update(api.Request) returns (api.Response) {}
+	rpc Search(api.Request) returns (api.Response) {}
+	rpc Read(api.Request) returns (api.Response) {}
 }
