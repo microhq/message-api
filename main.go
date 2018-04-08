@@ -21,7 +21,7 @@ func main() {
 
 	proto.RegisterMessageHandler(service.Server(), new(handler.Message))
 
-	handler.Client = proto2.NewMessageClient("go.micro.srv.message", service.Client())
+	handler.Client = proto2.MessageServiceClient("go.micro.srv.message", service.Client())
 
 	if err := service.Run(); err != nil {
 		log.Fatal(err)
