@@ -2,6 +2,9 @@
 
 The message api is an API service used behind the Micro API gateway. 
 
+## Dependence on Service
+- [message-srv](https://github.com/microhq/message-srv)
+
 ## Getting started
 
 1. Install Consul
