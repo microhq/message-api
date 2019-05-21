@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"time"
 
+	proto "github.com/micro/go-api/proto"
 	"github.com/micro/go-micro/errors"
-	proto2 "github.com/micro/message-srv/proto/message"
-	proto "github.com/micro/micro/api/proto"
+	proto2 "github.com/microhq/message-srv/proto/message"
 	"github.com/pborman/uuid"
 	"golang.org/x/net/context"
 )
@@ -16,7 +16,7 @@ import (
 type Message struct{}
 
 var (
-	Client proto2.MessageClient
+	Client proto2.MessageService
 )
 
 func extractValue(pair *proto.Pair) string {

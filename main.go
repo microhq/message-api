@@ -5,9 +5,9 @@ import (
 	"time"
 
 	"github.com/micro/go-micro"
-	"github.com/micro/message-api/handler"
-	proto "github.com/micro/message-api/proto/message"
-	proto2 "github.com/micro/message-srv/proto/message"
+	"github.com/microhq/message-api/handler"
+	proto "github.com/microhq/message-api/proto/message"
+	proto2 "github.com/microhq/message-srv/proto/message"
 )
 
 func main() {
@@ -21,7 +21,7 @@ func main() {
 
 	proto.RegisterMessageHandler(service.Server(), new(handler.Message))
 
-	handler.Client = proto2.MessageServiceClient("go.micro.srv.message", service.Client())
+	handler.Client = proto2.NewMessageService("go.micro.srv.message", service.Client())
 
 	if err := service.Run(); err != nil {
 		log.Fatal(err)

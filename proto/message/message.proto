@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package go.micro.srv.message;
 
-import "github.com/micro/micro/api/proto/api.proto";
+import "github.com/micro/go-api/proto/api.proto";
 
 service Message {
 	rpc Create(api.Request) returns (api.Response) {}
